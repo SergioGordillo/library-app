@@ -3,12 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Book } from '../../models/book.model';
-import { bookService } from './bookService.model';
+import { BookService } from './bookService.model';
 
 @Injectable({
   providedIn: 'root',
 })
-export class BookServiceImpl implements bookService<Book, string> {
+export class BookServiceImpl implements BookService<Book, string> {
   private baseUrl = '/api/books';
 
   constructor(private http: HttpClient) {}
